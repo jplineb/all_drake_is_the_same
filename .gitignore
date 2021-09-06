@@ -124,3 +124,7 @@ dmypy.json
 .pyre/
 Artists/Kanye/.DS_Store
 Artists/.DS_Store
+*.DS_Store
+.DS_Store
+Source/.DS_Store
+.DS_Store
