@@ -5,6 +5,12 @@ import argparse
 
 
 def main(artists, start_time, clip_length, random_start, seed):
+    smashed_songs = f'./Smashed_Songs/'
+    save_file = f'{artists}_{start_time}_{clip_length}_{str(random_start)}_{seed}.mp3'
+    save_path = os.path.join(smashed_songs, save_file)
+    print(f'Final song will be saved in: {save_file}')
+    if not os.path.exists(smashed_songs):
+        os.makedirs(smashed_songs)
     albums = get_albums(artists)
     songs = get_songs(albums)
     final_song = tape_music(songs,
@@ -12,7 +18,8 @@ def main(artists, start_time, clip_length, random_start, seed):
                             clip_length=clip_length,
                             random_start=random_start,
                             debug = True)
-    final_song.export('main_final_song.mp3', format='mp3')
+    final_song.export(save_path, format='mp3')
+    print("FINISHED")
     
     return(None)
 

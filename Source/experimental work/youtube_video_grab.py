@@ -1,6 +1,7 @@
 import os
 from pytube import YouTube
 import argparse
+import time
 
 def main(path_to_file, artist, album):
     # Get current working directory
@@ -17,6 +18,8 @@ def main(path_to_file, artist, album):
     
     # Loop over to download from links
     for yt_song in yt_songs:
+        # Put process to sleep so youtube doesn't ip ban you
+        time.sleep(5)
         try:
             save_file_path = YouTube(yt_song).streams.get_audio_only().download(output_path = save_dir)
             print('--------')
