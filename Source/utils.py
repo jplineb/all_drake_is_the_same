@@ -23,7 +23,7 @@ def get_songs(albums):
     
     return(all_songs)
 
-def smash_music(songs, start_time = 0, clip_length = 5, random_start = False, seed = 42, debug = False):
+def tape_music(songs, start_time = 0, clip_length = 5, random_start = False, seed = 42, debug = False):
     random.seed(seed)
     clip_length_ms = clip_length*1000
     start_time_ms = start_time*1000
@@ -53,16 +53,16 @@ def smash_music(songs, start_time = 0, clip_length = 5, random_start = False, se
     return(final_mix)
 
 # Testing Area
-albums = get_albums(["Kanye"])
-print(albums)
-songs = get_songs(albums)
-print(songs)
-final_song = smash_music(songs,
-                         start_time = 0,
-                         clip_length = 5,
-                         random_start = True,
-                         debug = True)
-final_song.export('final_song.mp3', format='mp3')
+# albums = get_albums(["Kanye"])
+# print(albums)
+# songs = get_songs(albums)
+# print(songs)
+# final_song = tape_music(songs,
+#                          start_time = 0,
+#                          clip_length = 5,
+#                          random_start = True,
+#                          debug = True)
+# final_song.export('final_song.mp3', format='mp3')
 
 
 
