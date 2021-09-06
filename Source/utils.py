@@ -35,8 +35,8 @@ def smash_music(songs, start_time = 0, clip_length = 5, random_start = False, se
             print(f'Error, start time is later than endinging for {song}')
         else:
             if random_start:
-                start_time_random_ms = random.randomint(0, (song_length-clip_length_ms))
-                song_segm = loaded_song[start_time_random_ms:start_time_random_ms+clip_length]
+                start_time_random_ms = random.randint(0, (song_length-clip_length_ms))
+                song_segm = loaded_song[start_time_random_ms:start_time_random_ms+clip_length_ms]
             else:
                 song_segm = loaded_song[start_time_ms:start_time_ms+clip_length_ms]
         
@@ -60,7 +60,7 @@ print(songs)
 final_song = smash_music(songs,
                          start_time = 0,
                          clip_length = 5,
-                         random_start = False,
+                         random_start = True,
                          debug = True)
 final_song.export('final_song.mp3', format='mp3')
 
