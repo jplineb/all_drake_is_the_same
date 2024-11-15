@@ -1,7 +1,7 @@
 # All Drake sounds the same
 
 ## About
-This github was a project to originaly  create tools that would randomly sample drake songs and combine them together into a new one. Then end product is to see if the new song has continuity.
+This repo was a project to originaly create tools that would randomly sample drake songs and combine them together into a new one. Then end product is to see if the new song has continuity.
 
 I ended up developing tools to mash together music into one big song. My experiments are in the form of ipython notebooks.
 
